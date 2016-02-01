@@ -13,6 +13,12 @@ design patterns and create an article
 explaining the JavaScript version of that design pattern 
 (include illuminating examples).
 
+/* OUR GITHUB FOR COMMITS AND ISSUES */
+
+https://github.com/JonMGabriel/CMS_System
+
+/* --------------------------------- */
+
 Ideas to remember moving forward:
 Let's use GitHub more efficiently moving forward:
     - Routinely commiting
@@ -20,7 +26,7 @@ Let's use GitHub more efficiently moving forward:
     - Closing issues on GitHub
 Plan ahead of time and be diligent of what we're accomplishing each day
     
-    
+
     
 Schedule:
     - Monday: get interface(s) done / write articles for content (include illuminating examples)
