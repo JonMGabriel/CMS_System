@@ -13,11 +13,15 @@ design patterns and create an article
 explaining the JavaScript version of that design pattern 
 (include illuminating examples).
 
+
+
 /* OUR GITHUB FOR COMMITS AND ISSUES */
 
 https://github.com/JonMGabriel/CMS_System
 
 /* --------------------------------- */
+
+
 
 Ideas to remember moving forward:
 Let's use GitHub more efficiently moving forward:
@@ -35,8 +39,16 @@ Schedule:
         - Writing the articles from the list below (think of a good illuminating example)
         
     - Tuesday: write scripts
-        - This may include swapping classes for the different design patterns
+        - This may include swapping classes for the different design patterns (single page design)
         - our user created interfaces with user generated content (?)
+        
+        - Are we going to be using Firebase (?)
+            - Andy linked something called localstorage
+            which saves content to the browser.
+                - detailed description: 
+                https://www.w3.org/TR/webstorage/#dom-localstorage
+                - less detailed:
+                http://www.w3schools.com/html/html5_webstorage.asp
     
     - Wednesday: (open)
     
@@ -64,3 +76,11 @@ Design patterns (4):
         4.) Factory (pg. 121)
             - Define an interface for creating an object, but let subclasses decide
             which class to instantiate. Factory Method lets a class defer instantiation
+            
+            
+            
+            
+OPEN SPACE FOR DISCUSSION:
+    - How are we making this project modular
+    - How are we taking user input and applying it to our site
+    

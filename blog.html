@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Blog  </title>
+        <meta name="author" content="David Geron-Neubauer and Jon Gabriel">
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body>
+        <header>
+            <img src = "http://i.imgur.com/MfixNWk.jpg" alt = "logo" style="width:400px">
+        </header>
+        
+        <hr> <!--TODO take out this replace with css? put in header?-->
+        <div class="mainWrapper column-1of2">
+            <div class="poster hCentered">
+                <input type="text" name="postTitle" placeholder="Post Title" required><br>
+                <textarea name="postContent" placeholder="Post Content"></textarea>
+                <button type="submit">Post!</button>
+            </div>
+            <div class="posts">
+                <!--have posts separated by <div title><br><div abridged content>?-->
+                <!--put in posts from Firebase-->
+                <div class="post" id="examplePost">
+                    <div class="date">12/31/99</div>
+                    <div class="postTitle">Y2k</div>
+                    <div class="postContent">SO SPOOP!</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar column-2of2">
+            <div class="otherPosts">
+                <!--Have previews of other posts, or maybe post titles ordered by date that you can click on-->
+                <ul>
+                    <h2> Other Posts </h2>
+                    <!--anchors so we can eventually do javascript stuff?-->
+                    <li><a href="#">Composite Design</a></li>
+                    <li> Flyweight Design </li>
+                    <li> Prototype Design </li>
+                    <li> Factory Design </li>
+                    <li><a href="#">See all...</a></li>
+                </ul>
+            </div>
+            
+            <div class="links">
+                <!--Misc. links-->
+                <ul>
+                    <h2> Links </h2>
+                    <li> Butts </li>
+                    <li> Farts </li>
+                    <li> Stinky Farts </li>
+                    <li> Silent Farts</li>
+                </ul>
+            </div>
+        </div> <!-- End of sidebar section -->
+    </body>
+    <!--<script src="drive.js"></script>-->
+</html>
