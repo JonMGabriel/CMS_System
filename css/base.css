@@ -21,10 +21,19 @@ h2 {
 
 header > img {
     height: 15vh;
+    width: 40vw;
+    max-width: 600px;
+}
+
+header > button {
+    height: calc(15vh / 2);
+    width: 15vw;
 }
 
 
 
-* {
-    transition: all ease-in-out 2s;
-}
+
+/*MOVED TO SHAME*/
+/** {*/
+/*    transition: all ease-in-out 2s;*/
+/*}*/

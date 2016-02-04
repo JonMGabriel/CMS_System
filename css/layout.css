@@ -53,8 +53,6 @@ Layouts:
 .downLayout .sidebar li {
     display: inline;
 }
-
-
 /*************************************/
 .mainWrapper{
 	position: relative;
@@ -91,24 +89,57 @@ Layouts:
     position: absolute;
     top: 100px;
     
-    /* background-color: #FFDF9A; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    
+    /*text-overflow: hidden;*/
+    /*overflow: hidden;*/
+    /*flex-wrap: wrap;*/
+}
+
+.posts > h1 {
+    /*flex: 0 0 10%;*/
 }
 
 .post {
+    /*flex: 1 1 20%;*/
     /*height: ...;*/
     /*width: ...;*/
-    margin: 20px;
-    /* background-color: #f2f2f2; */
+    margin: 10px;
+     /*background-color: #f2f2f2; */
+     
+    /*overflow: hidden;*/
+    /*overflow: scroll;*/
 }
 
 .postTitle {
     /*height for line-height relative to font?*/
     height: 1.375em;
+    /*min-width: 100%;*/
+    
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*white-space: pre-wrap;*/
+    text-overflow: ellipsis;
 }
 
 .postContent {
     /*height: 125px;*/
     max-height: calc(2 * 1.375em);
+    
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*white-space: pre-wrap;*/
+    text-overflow: ellipsis;
+}
+.sideLayout .postContent{
+    max-width: 70vw;
+}
+.downLayout .postContent{
+    max-width: 90vw;
 }
 
 .date{

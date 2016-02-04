@@ -1,0 +1,47 @@
+Flyweight Design Pattern:
+
+    A flyweight is an object that minimizes memory use by sharing as much data as possible 
+    with other similar objects; it is a way to use objects in large numbers when a simple 
+    repeated representation. This flyweight design pattern may be similar to our CSS Zen 
+    Garden Project, where we use abstract classes and minimized our CSS code as much as possible.
+    Within this CMS website, we have broken down our themes and colors to share as much 
+    CSS code as possible. Flyweight design would be similar to our various segmented boxes 
+    all having the same color, yet we simply call the same class to color them all.
+    
+    (*insert screenshot of shared CSS code and it's reuse in the array design*)
+
+Prototype Design Pattern:
+
+	A prototype is an object that is cloned to produce new objects. 
+	Something similar to this in JavaScript, and in our CMS design, 
+	is creating a template (for layouts of pages or design on a page). 
+	By creating a template, you have the ability to clone it and produce 
+	new templates that are slightly different than the first. This is 
+	advantageous for creators by avoiding the cost of creating a new object 
+	and avoids subclasses of objects in their creation.
+	
+	(*insert screenshot of the template in the header*)
+
+Factory Design Pattern:
+
+	A factory design involves creating lots of copies of something without 
+	specifying the class or type of thing that is being made. Usual factory
+	design involves defining an interface, then let subclasses decide
+	which classes to instantiate.
+	
+	So to put simply, a client needs a product; so instead of creating a new
+	object explicitly it asks a factory design for it's creation (providing
+	the information of the type of thing it needs). The factory creates the
+	request and the client uses the abstract product.and
+	
+	An example of this in JavaScript involves object oriented design and
+	having a factory design churn out general designed objects.
+	
+Composite Design Pattern:
+
+	Composite design involves altering whole branches of a tree structures
+	by simply altering a single node of smaller branch in the structure. A
+	javascript example of this involves writing and saving from our Firebase
+	database to maintain current data. By altering a single post, we in turn
+	maintain the whole branching system of data in the database.
+    

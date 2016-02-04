@@ -3,7 +3,6 @@
 /********************/
 .grey {
     background-color: #f2f2f2;
-    /*background-color: #0E0F5C;*/
 }
 
 .yellow {
@@ -26,10 +25,6 @@
     background-color: #294F6D;
 }
 
-.white_text {
-    color: white;
-}
-
 .gold {
     background-color: #D4A86A;
 }
@@ -42,14 +37,6 @@
     background-color: #AA5939;
 }
 
-.thick-border{
-    border: 3px solid blue;
-}
-
-.rounded {
-    border-radius: 15px;
-}
-
 .teal {
     background-color: #246D5F;
 }
@@ -60,4 +47,32 @@
 
 .lightteal {
     background-color: #6DA398;
+}
+
+.bloodorange {
+    background-color: #AA3939;
+}
+
+.lime {
+    background-color: #D4EE9F;
+}
+
+.coolblue {
+    background-color: #226666;
+}
+
+.thick-border{
+    border: 3px solid blue;
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.black_text {
+    color: black;
+}
+
+.white_text {
+    color: white;
 }

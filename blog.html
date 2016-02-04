@@ -17,9 +17,9 @@
             <!--</script>-->
         <!--</template>-->
         <template id="postTemplate">
-            <div class=".post">
-                <section><title></title></section>
-                <section><p></p></section>
+            <div class="post">
+                <section><p class="postTitle"></p></section>
+                <section><p class="postContent"></p></section>
                 <section><time></time></section>
             </div>
         </template>
@@ -27,14 +27,15 @@
     
     <body>
         <header>
-            <img src = "http://i.imgur.com/MfixNWk.jpg" alt = "logo">
+            <img src = "http://i.imgur.com/dvVkags.png" alt = "logo">
+            <img src = "http://i.imgur.com/010CtoL.png" alt = "hands">
             <button id = "swap_layout"> swap layout </button>
             <button id = "swap_theme"> swap theme </button>
         </header>
         
         <div class="content">
             <div class="mainWrapper">
-                <img src = "http://i.imgur.com/UBTEJeR.png" width = 160 height = 100 id = pencil alt = "pencil">
+                <img src = "http://i.imgur.com/UBTEJeR.png" width = 160 height = 100 id = "pencil" alt = "pencil">
                 <div class="poster">
                     <form>
                         <input type="text" name="postTitle" placeholder="Post Title" required><br>
@@ -47,23 +48,23 @@
                     <h1 id = ppost>Previous Posts</h1>
                     <!--have posts separated by <div title><br><div abridged content>?-->
                     <!--put in posts from Firebase-->
-                    <div class="post" id="examplePost">
-                        <div class="postTitle">
-                            <h1>Composite Design</h1>
-                        </div>
+            <!--        <div class="post" id="examplePost">-->
+            <!--            <div class="postTitle">-->
+            <!--                <h1>Composite Design</h1>-->
+            <!--            </div>-->
                         
-                        <div class="postContent">
-                            <p>Compose objects into tree structures to represent part-whole
-            hierarchies. Composite lets clients treat individual objects and
-            compositions of objects uniformly.</p>
-                        </div>
+            <!--            <div class="postContent">-->
+            <!--                <p>Compose objects into tree structures to represent part-whole-->
+            <!--hierarchies. Composite lets clients treat individual objects and-->
+            <!--compositions of objects uniformly.</p>-->
+            <!--            </div>-->
                         
-                        <div class="date">
-                            <h5>12/31/99</h5>
-                        </div>
+            <!--            <div class="date">-->
+            <!--                <h5>12/31/99</h5>-->
+            <!--            </div>-->
 
                         <!--have an "extend..." if goes too far (implement in js?)-->
-                    </div>
+            <!--        </div>-->
                     <!--post to be templated-->
                 </div>
                 
@@ -84,11 +85,12 @@
                     <ul>
                         <h2> Other Posts </h2>
                         <!--anchors so we can eventually do javascript stuff?-->
-                        <li><a href="#">Composite Design</a></li>
-                        <li> Flyweight Design </li>
-                        <li> Prototype Design </li>
-                        <li> Factory Design </li>
-                        <li><a href="#">See all...</a></li>
+                        <!--<li><a href="#">Composite Design</a></li>-->
+                        <!--<li> Flyweight Design </li>-->
+                        <!--<li> Prototype Design </li>-->
+                        <!--<li> Factory Design </li>-->
+                        <!--<li><a href="#">See all...</a></li>-->
+                        <!--have this added in updater-->
                     </ul>
                 </div>
                 

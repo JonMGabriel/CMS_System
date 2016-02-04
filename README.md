@@ -63,9 +63,9 @@ Schedule:
     - Wednesday:
         TO-DO:
             - Firebase communication
-            - Finalize Themes
+            - Finalize Themes (X)
             - Replicated the posts from the database to our Previous Posts section
-            - Present the other-posts and links section when clicked
+            - Present the other-posts and links section when clicked (Template / Blur)
             
         
     

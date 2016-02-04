@@ -4,9 +4,13 @@
 * {
     transition: all cubic-bezier(0.4, 0.29, 0.31, 1) .5s;
 }
+
 /******************************************************/
+
+
 /*need to move/abstract things out of layout section*/
-/***what needs to be in here?***/
+/********what needs to be in here?*******/
+/********where does everything else go?*******/
 .sidebar ul {
     list-style-type: none;
     padding: 10px;
@@ -24,7 +28,14 @@
     
     background-color: #66ccff;
 }
+
+.sidebar li a{
+    /*color: black;*/
+    text-decoration: none;
+}
 /*end move*/
+
+
 
 
 #swap_theme {
@@ -37,7 +48,7 @@
     /*top: 20px;*/
     right: 0;
     /*right: 20px;*/
-    width: 20%;
+    /*width: 15%;*/
 }
 #swap_layout {
     /* background-color: #97F9A3; */
@@ -45,15 +56,16 @@
     font-weight: bold;
 
     position: absolute;
-    top: 4%;
+    top: 8%;
+    top: 8vh;
     /*top: 20px;*/
     right: 0px;
     /*left: 20px;*/
-    width: 20%;
+    /*width: 15%;*/
 }
 
 #ppost {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
     text-decoration: underline;
 }
 
@@ -67,6 +79,7 @@
 }
 
 /*For posts clicked on the sidebar*/
+/*for use with HTML template*/
 .popOut {
     display: block; 
     background: #fefefe; 
@@ -77,10 +90,10 @@
     height: 90vh;
     top: 5%;
 }
-.popOut.blurFilter{
-    filter: none;
+/*.popOut.blurFilter{*/
+/*    filter: none;*/
     /*filter: blur(0px);*/
-}
+/*}*/
 
 .blurFilter {
     -webkit-filter: blur(2px);
