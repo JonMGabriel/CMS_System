@@ -3,58 +3,97 @@
     <head>
         <title> Blog  </title>
         <meta name="author" content="David Geron-Neubauer and Jon Gabriel">
-        <link rel="stylesheet" type="text/css" href="theme.css">
+        <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="theme.css">-->
+        <link rel="stylesheet" type="text/css" href="themeFlex.css">
         <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
     </head>
     
     <body>
         <header>
-            <img src = "http://i.imgur.com/MfixNWk.jpg" alt = "logo" style="width:400px">
+            <img src = "http://i.imgur.com/MfixNWk.jpg" alt = "logo">
+            <button id = "swap_theme"> swap theme </button>
         </header>
         
-        <hr> <!--TODO take out this replace with css? put in header?-->
-        <div class="mainWrapper column-1of2">
-            <div class="poster hCentered">
-                <input type="text" name="postTitle" placeholder="Post Title" required><br>
-                <textarea name="postContent" placeholder="Post Content"></textarea>
-                <button type="submit">Post!</button>
-            </div>
-            <div class="posts">
-                <!--have posts separated by <div title><br><div abridged content>?-->
-                <!--put in posts from Firebase-->
-                <div class="post" id="examplePost">
-                    <div class="date">12/31/99</div>
-                    <div class="postTitle">Y2k</div>
-                    <div class="postContent">SO SPOOP!</div>
+        <div class="content">
+            <div class="mainWrapper">
+                <img src = "http://i.imgur.com/PYc9bsI.jpg" width = 160 height = 100 id = pencil alt = "pencil">
+                <div class="poster">
+                    <form>
+                        <input type="text" name="postTitle" placeholder="Post Title" required><br>
+                        <textarea name="postContent" placeholder="Post Content"></textarea>
+                        <button type="submit" name="sendPost">Post!</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-        
-        <div class="sidebar column-2of2">
-            <div class="otherPosts">
-                <!--Have previews of other posts, or maybe post titles ordered by date that you can click on-->
-                <ul>
-                    <h2> Other Posts </h2>
-                    <!--anchors so we can eventually do javascript stuff?-->
-                    <li><a href="#">Composite Design</a></li>
-                    <li> Flyweight Design </li>
-                    <li> Prototype Design </li>
-                    <li> Factory Design </li>
-                    <li><a href="#">See all...</a></li>
-                </ul>
+                
+                <div class="posts">
+                    <h1 id = ppost>Previous Posts</h1>
+                    <!--have posts separated by <div title><br><div abridged content>?-->
+                    <!--put in posts from Firebase-->
+                    <div class="post" id="examplePost">
+                        <div class="postTitle">
+                            <h1>Composite Design</h1>
+                        </div>
+                        
+                        <div class="postContent">
+                            <p>Compose objects into tree structures to represent part-whole
+            hierarchies. Composite lets clients treat individual objects and
+            compositions of objects uniformly.</p>
+                        </div>
+                        
+                        <div class="date">
+                            <h5>12/31/99</h5>
+                        </div>
+
+                        <!--have an "extend..." if goes too far (implement in js?)-->
+                    </div>
+                    <!--post to be templated-->
+                </div>
+                
+                <!-- possible section replacement (in place
+                of posts) for single page design (?) -->
+                
+                <div class = "hidden" id = "other_posts">
+                    <h1> Flyweight Design </h1>
+                    <p> Stuff about flyweight design </p>
+                </div>
+                
+                <!-- ^ needs to implement showNextPage from andy's class 15 example -->
             </div>
             
-            <div class="links">
-                <!--Misc. links-->
-                <ul>
-                    <h2> Links </h2>
-                    <li> Butts </li>
-                    <li> Farts </li>
-                    <li> Stinky Farts </li>
-                    <li> Silent Farts</li>
-                </ul>
-            </div>
-        </div> <!-- End of sidebar section -->
+            <aside class="sidebar">
+                <div class="otherPosts">
+                    <!--Have previews of other posts, or maybe post titles ordered by date that you can click on-->
+                    <ul>
+                        <h2> Other Posts </h2>
+                        <!--anchors so we can eventually do javascript stuff?-->
+                        <li><a href="#">Composite Design</a></li>
+                        <li> Flyweight Design </li>
+                        <li> Prototype Design </li>
+                        <li> Factory Design </li>
+                        <li><a href="#">See all...</a></li>
+                    </ul>
+                </div>
+                
+                <div class="links">
+                    <!--Misc. links-->
+                    <ul>
+                        <h2> Links </h2>
+                        <li> Butts </li>
+                        <li> Farts </li>
+                        <li> Stinky Farts </li>
+                        <li> Silent Farts</li>
+                    </ul>
+                </div>
+            </aside> <!-- End of sidebar section -->
+        </div>
+        
+        <footer> A content management system by David Geron-Neubauer & Jon Gabriel
+            <!--<button type="button" id="update">Click to update the DB</button>-->
+            <!--<p id="blah">BLAH</p>-->
+        </footer>
+                            <!--*************************************-->
+                            <script src="drive.js"></script>
     </body>
-    <!--<script src="drive.js"></script>-->
+    
 </html>

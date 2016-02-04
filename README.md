@@ -36,9 +36,12 @@ Schedule:
     - Monday: get interface(s) done / write articles for content (include illuminating examples)
         - This includes creating the two themes for users to choose from (index.html & theme.css)
             - Maybe we use abstract classes from project 3
-        - Writing the articles from the list below (think of a good illuminating example)
+        - Writing the articles from the list below (think of good illuminating example)
         
-    - Tuesday: write scripts
+    - Tuesday: 
+    
+    
+    write scripts
         - This may include swapping classes for the different design patterns (single page design)
         - our user created interfaces with user generated content (?)
         
@@ -49,7 +52,14 @@ Schedule:
                 https://www.w3.org/TR/webstorage/#dom-localstorage
                 - less detailed:
                 http://www.w3schools.com/html/html5_webstorage.asp
-    
+        
+        Need to do:
+            - JavaScript:
+                - Write click listener and function for posting content
+                - Write swap theme function for alternating between content
+            - CSS:
+                - Alter between the themes in posts
+        
     - Wednesday: (open)
     
     - Thursday: touch up final details, work on how we will be presenting the final product
@@ -76,7 +86,6 @@ Design patterns (4):
         4.) Factory (pg. 121)
             - Define an interface for creating an object, but let subclasses decide
             which class to instantiate. Factory Method lets a class defer instantiation
-            
             
             
             
