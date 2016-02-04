@@ -1,0 +1,63 @@
+/********************/
+/*******THEMES*******/
+/********************/
+.grey {
+    background-color: #f2f2f2;
+    /*background-color: #0E0F5C;*/
+}
+
+.yellow {
+    background-color: #FFDF9A;
+}
+
+.blue {
+    background-color: #95ECF4;
+}
+
+.pink {
+    background-color: #FF9F9A
+}
+
+.green {
+    background-color: #97F9A3;
+}
+
+.darkblue {
+    background-color: #294F6D;
+}
+
+.white_text {
+    color: white;
+}
+
+.gold {
+    background-color: #D4A86A;
+}
+
+.purple {
+    background-color: #343477;
+}
+
+.orange {
+    background-color: #AA5939;
+}
+
+.thick-border{
+    border: 3px solid blue;
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.teal {
+    background-color: #246D5F;
+}
+
+.lightblue {
+    background-color: #2C4770;
+}
+
+.lightteal {
+    background-color: #6DA398;
+}

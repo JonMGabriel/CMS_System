@@ -1,0 +1,30 @@
+/*********************************/
+/**************Base***************/
+/*********************************/
+body {
+    font-family: 'Noto Serif', serif;
+    background-color: #fff;
+    
+    /*transition: all ease-in-out 2s;*/
+}
+header {
+    height: 15vh;
+    background-color: white;
+}
+footer {
+    height: 5vh;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+header > img {
+    height: 15vh;
+}
+
+
+
+* {
+    transition: all ease-in-out 2s;
+}

@@ -60,7 +60,14 @@ Schedule:
             - CSS:
                 - Alter between the themes in posts
         
-    - Wednesday: (open)
+    - Wednesday:
+        TO-DO:
+            - Firebase communication
+            - Finalize Themes
+            - Replicated the posts from the database to our Previous Posts section
+            - Present the other-posts and links section when clicked
+            
+        
     
     - Thursday: touch up final details, work on how we will be presenting the final product
     

@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Blog  </title>
+        <title> Sentence Smush </title>
         <meta name="author" content="David Geron-Neubauer and Jon Gabriel">
         <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-        <!--<link rel="stylesheet" type="text/css" href="theme.css">-->
-        <link rel="stylesheet" type="text/css" href="themeFlex.css">
+        <!--<link rel="stylesheet" type="text/css" href="themeFlex.css">-->
+        <link rel="stylesheet" type="text/css" href="/css/base.css">
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="/css/shame.extras.css">
         <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+            
+        <!--<template>-->
+            <!--<script type="text">-->
+                <!--document.body.classList.add(" blurFilter");-->
+            <!--</script>-->
+        <!--</template>-->
+        <template id="postTemplate">
+            <div class=".post">
+                <section><title></title></section>
+                <section><p></p></section>
+                <section><time></time></section>
+            </div>
+        </template>
     </head>
     
     <body>
         <header>
             <img src = "http://i.imgur.com/MfixNWk.jpg" alt = "logo">
+            <button id = "swap_layout"> swap layout </button>
             <button id = "swap_theme"> swap theme </button>
         </header>
         
         <div class="content">
             <div class="mainWrapper">
-                <img src = "http://i.imgur.com/PYc9bsI.jpg" width = 160 height = 100 id = pencil alt = "pencil">
+                <img src = "http://i.imgur.com/UBTEJeR.png" width = 160 height = 100 id = pencil alt = "pencil">
                 <div class="poster">
                     <form>
                         <input type="text" name="postTitle" placeholder="Post Title" required><br>
@@ -26,7 +43,7 @@
                     </form>
                 </div>
                 
-                <div class="posts">
+                <div class="posts" id="postSeciton">
                     <h1 id = ppost>Previous Posts</h1>
                     <!--have posts separated by <div title><br><div abridged content>?-->
                     <!--put in posts from Firebase-->

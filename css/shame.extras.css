@@ -1,0 +1,91 @@
+/*******************************/
+/************SHAME**************/
+/*******************************/
+* {
+    transition: all cubic-bezier(0.4, 0.29, 0.31, 1) .5s;
+}
+/******************************************************/
+/*need to move/abstract things out of layout section*/
+/***what needs to be in here?***/
+.sidebar ul {
+    list-style-type: none;
+    padding: 10px;
+}
+.sidebar li {
+    padding: 8px 14px;
+    margin: 4px;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFDF9A;
+}
+.sidebar li:hover {
+    box-shadow: 3px 2px 3px;
+    
+    background-color: #66ccff;
+}
+/*end move*/
+
+
+#swap_theme {
+    /* background-color: #97F9A3; */
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+
+    position: absolute;
+    top: 0;
+    /*top: 20px;*/
+    right: 0;
+    /*right: 20px;*/
+    width: 20%;
+}
+#swap_layout {
+    /* background-color: #97F9A3; */
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+
+    position: absolute;
+    top: 4%;
+    /*top: 20px;*/
+    right: 0px;
+    /*left: 20px;*/
+    width: 20%;
+}
+
+#ppost {
+    padding-left: 20px;
+    text-decoration: underline;
+}
+
+
+
+/*******************************/
+/************EXTRAS*************/
+/*******************************/
+.hidden {
+  display: none;
+}
+
+/*For posts clicked on the sidebar*/
+.popOut {
+    display: block; 
+    background: #fefefe; 
+    border: 2px solid #474747; 
+
+    position: fixed; 
+    width: 90vw; 
+    height: 90vh;
+    top: 5%;
+}
+.popOut.blurFilter{
+    filter: none;
+    /*filter: blur(0px);*/
+}
+
+.blurFilter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
