@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
       //Clear sumbits
       postTitle.value = "";
       postContent.value = "";
-      //Refresh lists
-      //below two lines are done in a listener at the bottom
-      // resetPosts();
-      // myDB.once("value", populatePosts);
+      //Refresh lists happen in INITIAL STATE section
     }
     else
       alert("You must enter a title for your blog entry, please!");
@@ -225,30 +222,6 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   //***********************************
   //***********INITIAL STATE***********
   //***********************************
-  // myDB.child(workingSection).once("value", function(){
-  //   resetPosts();
-  //   myDB.once("value", function(snapshot){
-  //     populatePosts(snapshot);
-  //     nextTheme();
-  //     console.log("test");
-  //   });
-  //   // console.log("CHILD_ADDED TRIGGERED");
-  //   console.log("VALUE TRIGGERED");
-  // });
-  
-  // myDB.child(workingSection).once("value", function(snapshot){
-  //   // resetPosts();
-  //   populatePosts(snapshot);
-  //   // nextTheme();
-  //   myDB.child(workingSection).once("value", function(){
-  //     // populatePosts(snapshot)
-  //     nextTheme();
-  //     console.log("test");
-  //   });
-  //   // console.log("CHILD_ADDED TRIGGERED");
-  //   console.log("VALUE TRIGGERED");
-  // });
-  // myDB.child(workingSection).on("child_added", function(){
   myDB.once("value", function(snapshot) {
       // doTheRag(snapshot);
       myDB.on("value", doTheRag);
