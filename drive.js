@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
     else
       alert("You must enter a title for your blog entry, please!");
   };
-  document.getElementById("sendPost").addEventListener('click', sendPost);
   
   
   
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
         clone.querySelector(".postContent").innerHTML = childSnapshot.val().Content;
         clone.querySelector("time").innerHTML = (new Date(childSnapshot.val().Time_Posted)).toString();
         //**********************************
-        clone.querySelector(".postTitle").addEventListener('click', addPopoutListener);
+        clone.querySelector(".postTitle").addEventListener('click', addPopout);
         //**********************************
         postsEl.insertBefore(clone, postsEl.firstElementChild.nextElementSibling);
         docPostsLength++;
@@ -71,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
       a.setAttribute("href", "#");
       a.innerHTML = childSnapshot.key();
       //**********************************
-      a.addEventListener('click', addPopoutListener);
+      a.addEventListener('click', addPopout);
       //**********************************
       var li = document.createElement("li");
       li.appendChild(a);
@@ -80,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   };
   
   
-  var addPopoutListener = function(ev){
+  var addPopout = function(ev){
     var currentValue = ev.currentTarget;
     
     myDB.once("value", function(snapshot, prevChildKey) {
@@ -191,11 +190,10 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
     themes[currentThemeIndex].forEach(removeThemePair); //just incase, idk if we really need this line
     themes[currentThemeIndex].forEach(applyThemePair);
   };
+  
+  
+  
 
-  document.getElementById("swap_theme").addEventListener('click', nextTheme);
-  
-  
-  
   //***********************************
   //***********LAYOUT SWAPPER**********
   //***********************************
@@ -215,7 +213,6 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
       document.querySelector(oppositeOrder[1][0]).classList.toggle(oppositeOrder[1][1]);
     }
   };
-  document.getElementById("swap_layout").addEventListener('click', nextLayout);
   
   
   
@@ -235,11 +232,11 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
       console.log("HERE BE TRIGGERS");
   };
 
-  
-  
-  //need to fix to apply first theme after everything loads
-    //may need some restructuring of calls and DOMContentLoaded or sumthin
   document.querySelector(".content").classList.add("sideLayout");
-  // myDB.on("value", populatePosts);
-  // nextTheme();
+  
+  //Event Listenters
+  //(popOut listeners are added in populatePosts() )
+  document.getElementById("sendPost").addEventListener('click', sendPost);
+  document.getElementById("swap_theme").addEventListener('click', nextTheme);
+  document.getElementById("swap_layout").addEventListener('click', nextLayout);
 });
