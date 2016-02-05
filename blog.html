@@ -4,21 +4,16 @@
         <title> Sentence Smush </title>
         <meta name="author" content="David Geron-Neubauer and Jon Gabriel">
         <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-        <!--<link rel="stylesheet" type="text/css" href="themeFlex.css">-->
         <link rel="stylesheet" type="text/css" href="/css/base.css">
         <link rel="stylesheet" type="text/css" href="/css/layout.css">
         <link rel="stylesheet" type="text/css" href="/css/theme.css">
         <link rel="stylesheet" type="text/css" href="/css/shame.extras.css">
         <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
             
-        <!--<template>-->
-            <!--<script type="text">-->
-                <!--document.body.classList.add(" blurFilter");-->
-            <!--</script>-->
-        <!--</template>-->
         <template id="postTemplate">
             <div class="post">
-                <section><p class="postTitle"></p></section>
+                <section><a href="#" class="postTitle"></a></section>
+                <!--<section><p class="postTitle"></p></section>-->
                 <section><p class="postContent"></p></section>
                 <section><time></time></section>
             </div>
@@ -26,93 +21,67 @@
     </head>
     
     <body>
-        <header>
-            <img src = "http://i.imgur.com/dvVkags.png" alt = "logo">
-            <img src = "http://i.imgur.com/010CtoL.png" alt = "hands">
-            <button id = "swap_layout"> swap layout </button>
-            <button id = "swap_theme"> swap theme </button>
-        </header>
-        
-        <div class="content">
-            <div class="mainWrapper">
-                <img src = "http://i.imgur.com/UBTEJeR.png" width = 160 height = 100 id = "pencil" alt = "pencil">
-                <div class="poster">
-                    <form>
-                        <input type="text" name="postTitle" placeholder="Post Title" required><br>
-                        <textarea name="postContent" placeholder="Post Content"></textarea>
-                        <button type="submit" name="sendPost">Post!</button>
-                    </form>
-                </div>
-                
-                <div class="posts" id="postSeciton">
-                    <h1 id = ppost>Previous Posts</h1>
-                    <!--have posts separated by <div title><br><div abridged content>?-->
-                    <!--put in posts from Firebase-->
-            <!--        <div class="post" id="examplePost">-->
-            <!--            <div class="postTitle">-->
-            <!--                <h1>Composite Design</h1>-->
-            <!--            </div>-->
-                        
-            <!--            <div class="postContent">-->
-            <!--                <p>Compose objects into tree structures to represent part-whole-->
-            <!--hierarchies. Composite lets clients treat individual objects and-->
-            <!--compositions of objects uniformly.</p>-->
-            <!--            </div>-->
-                        
-            <!--            <div class="date">-->
-            <!--                <h5>12/31/99</h5>-->
-            <!--            </div>-->
-
+        <div id="realBody">
+            <header>
+                <img src = "http://i.imgur.com/dvVkags.png" alt = "logo">
+                <img src = "http://i.imgur.com/010CtoL.png" alt = "hands">
+                <button id = "swap_layout"> swap layout </button>
+                <button id = "swap_theme"> swap theme </button>
+            </header>
+            
+            <section class="explanation">
+                <p> Welcome to Sentence Press! Inspired by Andy Novocin, sentence press is designed to <br>
+                discuss design patterns. A design pattern is a general reusable solution to a commonly <br>
+                occurring problem within a given context in coding design. Here we discuss some design<br>
+                patterns; along with your input that can be posted to the blog!</p>
+            </section>
+            
+            <div class="content">
+                <div class="mainWrapper">
+                    <img src = "http://i.imgur.com/UBTEJeR.png" width = 160 height = 100 id = "pencil" alt = "pencil">
+                    <div class="poster">
+                        <form>
+                            <input type="text" id="postTitle" placeholder="Post Title" required><br>
+                            <!--<input type="text" name="postTitle" placeholder="Post Title" required>-->
+                            <textarea id="postContent" placeholder="Post Content"></textarea>
+                            <button type="button" id="sendPost">Post!</button>
+                        </form>
+                    </div>
+                    
+                    <div class="posts" id="postSeciton">
+                        <h1 id = ppost>Recent Posts</h1>
                         <!--have an "extend..." if goes too far (implement in js?)-->
-            <!--        </div>-->
-                    <!--post to be templated-->
+                    </div>
                 </div>
                 
-                <!-- possible section replacement (in place
-                of posts) for single page design (?) -->
-                
-                <div class = "hidden" id = "other_posts">
-                    <h1> Flyweight Design </h1>
-                    <p> Stuff about flyweight design </p>
-                </div>
-                
-                <!-- ^ needs to implement showNextPage from andy's class 15 example -->
+                <aside class="sidebar otherPosts">
+                    <!--<div class="otherPosts">-->
+                        <ul>
+                            <h2> Other Posts </h2>
+                            <!--anchors so we can eventually do javascript stuff?-->
+                            <!--<li><a href="#">Composite Design</a></li>-->
+                            <!--<li> Flyweight Design </li>-->
+                            <!--<li> Prototype Design </li>-->
+                            <!--<li> Factory Design </li>-->
+                            <!--<li><a href="#">See all...</a></li>-->
+                            <!--have this added in updater-->
+                        </ul>
+                    <!--</div>-->
+                </aside> <!-- End of sidebar section -->
             </div>
             
-            <aside class="sidebar">
-                <div class="otherPosts">
-                    <!--Have previews of other posts, or maybe post titles ordered by date that you can click on-->
-                    <ul>
-                        <h2> Other Posts </h2>
-                        <!--anchors so we can eventually do javascript stuff?-->
-                        <!--<li><a href="#">Composite Design</a></li>-->
-                        <!--<li> Flyweight Design </li>-->
-                        <!--<li> Prototype Design </li>-->
-                        <!--<li> Factory Design </li>-->
-                        <!--<li><a href="#">See all...</a></li>-->
-                        <!--have this added in updater-->
-                    </ul>
-                </div>
-                
-                <div class="links">
-                    <!--Misc. links-->
-                    <ul>
-                        <h2> Links </h2>
-                        <li> Butts </li>
-                        <li> Farts </li>
-                        <li> Stinky Farts </li>
-                        <li> Silent Farts</li>
-                    </ul>
-                </div>
-            </aside> <!-- End of sidebar section -->
+            <footer> A content management system by David Geron-Neubauer & Jon Gabriel
+                <!--<button type="button" id="update">Click to update the DB</button>-->
+                <!--<p id="blah">BLAH</p>-->
+            </footer>
+        </div>
+        <div id="poppedContainer" class="hidden">
+            <div id="popped"></div>
+            <div id="emptyDiv"></div>
         </div>
         
-        <footer> A content management system by David Geron-Neubauer & Jon Gabriel
-            <!--<button type="button" id="update">Click to update the DB</button>-->
-            <!--<p id="blah">BLAH</p>-->
-        </footer>
-                            <!--*************************************-->
-                            <script src="drive.js"></script>
+        <!--*************************************-->
+        <script src="drive.js"></script>
     </body>
     
 </html>

@@ -17,9 +17,18 @@ Layouts:
     order: 1;
 }
 /*************************************/
+.explanation{
+    min-height: 88px;
+    min-height: calc(1.375em * 4);
+    
+    /*font-size: 2vh;*/
+    /*font-size: calc(3.5vw - 100%);*/
+    /*font-size: calc(calc(1vh + 1vw) / 2);*/
+}
 /*************************************/
 .content {
     height: 80vh;
+    /*height: 100%;*/
     
     display: flex;
     align-items: stretch;
@@ -34,6 +43,11 @@ Layouts:
 /*************************************/
 .sidebar{
 	text-align: center;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/*overflow: hidden;*/
+	/*white-space: nowrap;*/
 }
 .sideLayout .sidebar{
 	flex: 3 3 20vw;
@@ -100,18 +114,15 @@ Layouts:
     /*flex-wrap: wrap;*/
 }
 
-.posts > h1 {
-    /*flex: 0 0 10%;*/
-}
-
 .post {
-    /*flex: 1 1 20%;*/
+    flex: 1 1 100%;
     /*height: ...;*/
     /*width: ...;*/
     margin: 10px;
+    border-style: solid;
      /*background-color: #f2f2f2; */
      
-    /*overflow: hidden;*/
+    overflow: hidden;
     /*overflow: scroll;*/
 }
 
@@ -121,27 +132,44 @@ Layouts:
     /*min-width: 100%;*/
     
     overflow: hidden;
-    /*white-space: nowrap;*/
+    white-space: nowrap;
     /*white-space: pre-wrap;*/
     text-overflow: ellipsis;
+    font-size: 200%;
 }
 
 .postContent {
     /*height: 125px;*/
     max-height: calc(2 * 1.375em);
+    /*line-height: 1.375em;*/
     
     overflow: hidden;
-    /*white-space: nowrap;*/
+    white-space: nowrap;
     /*white-space: pre-wrap;*/
     text-overflow: ellipsis;
+    font-size: 20px;
 }
 .sideLayout .postContent{
-    max-width: 70vw;
+    max-width: 70vw; /* 70vw */
 }
 .downLayout .postContent{
-    max-width: 90vw;
+    max-width: 90vw; /* 90vw */
 }
 
 .date{
     height: 1.375em;
 }
+
+/******************************/
+.explanation p{
+    margin: 0px;
+}
+
+
+
+
+/*FOR TESTING*/
+/*.post *{*/
+    /*margin: -1px;*/
+    /* border: 1px dotted blue; */
+/*}*/

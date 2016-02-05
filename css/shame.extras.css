@@ -37,7 +37,9 @@
 
 
 
-
+header{
+    position: relative;
+}
 #swap_theme {
     /* background-color: #97F9A3; */
     font-family: 'Noto Serif', serif;
@@ -56,8 +58,8 @@
     font-weight: bold;
 
     position: absolute;
-    top: 8%;
-    top: 8vh;
+    top: 50%;
+    /*top: 8vh;*/
     /*top: 20px;*/
     right: 0px;
     /*left: 20px;*/
@@ -69,7 +71,13 @@
     text-decoration: underline;
 }
 
+.explanation {
+    padding-left: 20px;
+}
 
+.postTitle {
+    text-decoration: underline;
+}
 
 /*******************************/
 /************EXTRAS*************/
@@ -78,27 +86,53 @@
   display: none;
 }
 
+/***********POPOUT*************/
 /*For posts clicked on the sidebar*/
 /*for use with HTML template*/
+#poppedContainer{
+    height: 100vh;
+    width: calc(100vw - 21px);
+    /*why 21px (as opposed to 20px)...idk, but that's the best <- lol*/
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+#emptyDiv {
+    height: 100%;
+    width: 100%;
+}
+
 .popOut {
-    display: block; 
+    display: block;
+    position: fixed; 
+    width: 80vw; 
+    height: 80vh;
+    top: 5%;
+    left: calc(10vw - 20px);
+    
     background: #fefefe; 
     border: 2px solid #474747; 
-
-    position: fixed; 
-    width: 90vw; 
-    height: 90vh;
-    top: 5%;
+    box-shadow: 0px 0px 10px;
+    /*z-index: 50;*/
 }
-/*.popOut.blurFilter{*/
-/*    filter: none;*/
-    /*filter: blur(0px);*/
-/*}*/
+
+.popOut h1 {
+    text-decoration: underline;
+    background-color: #cccccc;
+}
+
+.popOut .postContent{
+    max-height: 100%;
+}
 
 .blurFilter {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    
+    pointer-events: none;
 }

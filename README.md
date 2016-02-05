@@ -62,14 +62,16 @@ Schedule:
         
     - Wednesday:
         TO-DO:
-            - Firebase communication
+            - Firebase communication (/)
             - Finalize Themes (X)
-            - Replicated the posts from the database to our Previous Posts section
-            - Present the other-posts and links section when clicked (Template / Blur)
+            - Replicated the posts from the database to our Previous Posts section (X)
+            - Present the other-posts and links section when clicked (Template / Blur) (X)
             
         
     
     - Thursday: touch up final details, work on how we will be presenting the final product
+        - Firebase write-to and populate post
+        - onBlur for links on the side (X)
     
     - Friday: Presentation day
     
