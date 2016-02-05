@@ -11,18 +11,7 @@
 /*need to move/abstract things out of layout section*/
 /********what needs to be in here?*******/
 /********where does everything else go?*******/
-.sidebar ul {
-    list-style-type: none;
-    padding: 10px;
-}
-.sidebar li {
-    padding: 8px 14px;
-    margin: 4px;
-    
-    border-style: solid;
-    border-width: 2px;
-    border-color: #FFDF9A;
-}
+
 .sidebar li:hover {
     box-shadow: 3px 2px 3px;
     
@@ -37,42 +26,25 @@
 
 
 
-header{
-    position: relative;
-}
 #swap_theme {
-    /* background-color: #97F9A3; */
     font-family: 'Noto Serif', serif;
     font-weight: bold;
 
     position: absolute;
     top: 0;
-    /*top: 20px;*/
     right: 0;
-    /*right: 20px;*/
-    /*width: 15%;*/
 }
 #swap_layout {
-    /* background-color: #97F9A3; */
     font-family: 'Noto Serif', serif;
     font-weight: bold;
 
     position: absolute;
     top: 50%;
-    /*top: 8vh;*/
-    /*top: 20px;*/
     right: 0px;
-    /*left: 20px;*/
-    /*width: 15%;*/
 }
 
 #ppost {
-    /*padding-left: 20px;*/
     text-decoration: underline;
-}
-
-.explanation {
-    padding-left: 20px;
 }
 
 .postTitle {
@@ -125,6 +97,10 @@ header{
 
 .popOut .postContent{
     max-height: 100%;
+    
+    overflow: hidden;
+    white-space: normal;
+    /*text-overflow: ellipsis;*/
 }
 
 .blurFilter {

@@ -7,8 +7,6 @@ body {
     /*background-color: #000;*/
     
     margin: 0;
-    /*padding: 0;*/
-    /*transition: all ease-in-out 2s;*/
 }
 
 footer {
@@ -16,12 +14,13 @@ footer {
 }
 
 h2 {
-    /*margin: 0;*/
     text-decoration: underline;
 }
 
 header {
     height: 15vh;
+    position: relative;
+    
     background-color: white;
 }
 
@@ -36,10 +35,6 @@ header > button {
     width: 15vw;
 }
 
-
-
-
-/*MOVED TO SHAME*/
-/** {*/
-/*    transition: all ease-in-out 2s;*/
-/*}*/
+textarea {
+    resize: none;
+}
