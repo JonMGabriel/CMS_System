@@ -1,3 +1,12 @@
+Blurb:
+
+	Welcome to Sentence Press! Inspired by Andy Novocin, sentence press is designed to
+    discuss design patterns. A design pattern is a general reusable solution to a commonly
+    occurring problem within a given context in coding design. Here we discuss some design
+    patterns; along with your input that can be posted to the blog!
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Flyweight Design Pattern:
 
     A flyweight is an object that minimizes memory use by sharing as much data as possible 

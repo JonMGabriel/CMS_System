@@ -200,10 +200,10 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   var layouts = ["sideLayout", "downLayout"];
   var oppositeOrder = [['.mainWrapper', 'second'],
                       ['.sidebar', 'first']];
-  var currentLayoutIndex = -1;
-  var toSwitch = true;
+  // var currentLayoutIndex = -1;
+  // var toSwitch = true;
   var nextLayout = function(){
-    var sidebar = document.querySelector(".sidebar");
+    // var sidebar = document.querySelector(".sidebar");
     
     //Hacky way since there's only 2 layouts
     document.querySelector(".content").classList.toggle(layouts[0]);
@@ -221,15 +221,15 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   //***********************************
   myDB.once("value", function(snapshot) {
       // doTheRag(snapshot);
-      myDB.on("value", doTheRag);
+      myDB.on("value", refreshPosts);
       myDB.once("value", nextTheme);
   });
-  var doTheRag = function(snapshot){
+  var refreshPosts = function(snapshot){
       resetPosts();
       populatePosts(snapshot);
       reApplyTheme();
-      console.log(currentThemeIndex);
-      console.log("HERE BE TRIGGERS");
+      // console.log(currentThemeIndex);
+      // console.log("HERE BE TRIGGERS");
   };
 
   document.querySelector(".content").classList.add("sideLayout");
