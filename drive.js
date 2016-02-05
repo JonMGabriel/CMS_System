@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   
   
   var resetPosts = function(){
-    document.querySelector(".posts").innerHTML = "<h1 id = ppost>Recent Posts</h1>";
+    document.querySelector(".posts").innerHTML = "<h1 id = ppost>Featured Posts</h1>";
     document.querySelector(".otherPosts").innerHTML = "<h2>Other Posts</h2><ul></ul>";
   };
 
