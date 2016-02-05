@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   /* Firebase commands */
   /*********************/
   var myDB = new Firebase("https://cisc-479-project4.firebaseio.com/");
-  var designPatterns = "DesignPatterns"; //unused currently
+  var designPatterns = "DesignPatterns";
   // var workingSection = "TestPosts";
   var workingSection = designPatterns;
   myDB.child(workingSection).orderByPriority();
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   //***********************************
   //************POSTS STUFF************
   //***********************************
+  
   var sendPost = function(ev) {
     var date = (new Date()).toISOString();
     var postTitle = document.getElementById("postTitle");
@@ -29,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
       postTitle.value = "";
       postContent.value = "";
       //Refresh lists
-      resetPosts();
-      myDB.once("value", populatePosts);
+      //below two lines are done in a listener at the bottom
+      // resetPosts();
+      // myDB.once("value", populatePosts);
     }
     else
       alert("You must enter a title for your blog entry, please!");
@@ -41,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   
   var resetPosts = function(){
     document.querySelector(".posts").innerHTML = "<h1 id = ppost>Recent Posts</h1>";
-    document.querySelector(".otherPosts").innerHTML = "<ul><h2>Other Posts</h2></ul>";
+    document.querySelector(".otherPosts").innerHTML = "<h2>Other Posts</h2><ul></ul>";
   };
 
-  var populatePosts = function(snapshot, prevChildKey){
+  var populatePosts = function(snapshot){
     var postsEl = document.querySelector(".posts");
     var sidePostsListEl = document.querySelector(".otherPosts").querySelector("ul");
     
@@ -186,6 +188,12 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
     }
     themes[currentThemeIndex].forEach(applyThemePair);
   };
+  
+  var reApplyTheme = function(){
+    if(currentThemeIndex < 0) return;
+    themes[currentThemeIndex].forEach(removeThemePair); //just incase, idk if we really need this line
+    themes[currentThemeIndex].forEach(applyThemePair);
+  };
 
   document.getElementById("swap_theme").addEventListener('click', nextTheme);
   
@@ -217,9 +225,48 @@ document.addEventListener("DOMContentLoaded", function(){ //ends at bottom
   //***********************************
   //***********INITIAL STATE***********
   //***********************************
+  // myDB.child(workingSection).once("value", function(){
+  //   resetPosts();
+  //   myDB.once("value", function(snapshot){
+  //     populatePosts(snapshot);
+  //     nextTheme();
+  //     console.log("test");
+  //   });
+  //   // console.log("CHILD_ADDED TRIGGERED");
+  //   console.log("VALUE TRIGGERED");
+  // });
+  
+  // myDB.child(workingSection).once("value", function(snapshot){
+  //   // resetPosts();
+  //   populatePosts(snapshot);
+  //   // nextTheme();
+  //   myDB.child(workingSection).once("value", function(){
+  //     // populatePosts(snapshot)
+  //     nextTheme();
+  //     console.log("test");
+  //   });
+  //   // console.log("CHILD_ADDED TRIGGERED");
+  //   console.log("VALUE TRIGGERED");
+  // });
+  // myDB.child(workingSection).on("child_added", function(){
+  myDB.once("value", function(snapshot) {
+      // doTheRag(snapshot);
+      myDB.on("value", doTheRag);
+      myDB.once("value", nextTheme);
+  });
+  var doTheRag = function(snapshot){
+      resetPosts();
+      populatePosts(snapshot);
+      reApplyTheme();
+      console.log(currentThemeIndex);
+      console.log("HERE BE TRIGGERS");
+  };
+
+  
+  
   //need to fix to apply first theme after everything loads
     //may need some restructuring of calls and DOMContentLoaded or sumthin
   document.querySelector(".content").classList.add("sideLayout");
-  myDB.on("value", populatePosts);
-  nextTheme();
+  // myDB.on("value", populatePosts);
+  // nextTheme();
 });
